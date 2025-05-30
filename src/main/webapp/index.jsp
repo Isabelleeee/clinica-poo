@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +11,14 @@
     <title>Login / Cadastro</title>
 </head>
 <body>
+
+    <!-- Mensagem de cadastro bem-sucedido -->
+    <c:if test="${param.novocadastro == '1'}">
+      <div class="success">
+        Cadastro realizado com sucesso! Faça o login abaixo.
+      </div>
+    </c:if>
+
     <section class="containerPai">
         <div class="card loginActive">
             <div class="esquerda">
