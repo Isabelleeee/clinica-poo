@@ -1,0 +1,273 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Unageo";
+    font-weight: 400;
+}
+
+@font-face {
+    font-family:"Unageo" ;
+    src: url("../assets/Unageo-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Unageo" ;
+    src: url("../assets/Unageo-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Unageo" ;
+    src: url("../assets/Unageo-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Unageo" ;
+    src: url("../assets/Unageo-SemiBold.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+body{
+    color: #f0f0f0;
+}
+
+h2{
+    font-size: 60px;
+    margin-bottom: 32px;
+    text-align: center;
+    font-weight: 700;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    button{
+        background: linear-gradient(90deg, 	#499CC2 0%, #d2eef7 100%);
+    }
+}
+
+input, button{
+    padding: 12px 20px;
+    border-radius: 12px;
+    border:none;
+    outline: none;
+    font-size: 16px;
+    width: 500px;
+}
+
+input{
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+input::placeholder{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+button{
+    margin-top: 8px;
+    font-weight: 500;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+p{
+    margin-bottom: 32px;
+    width: 400px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.containerPai{
+    width: 100%;
+    height: 100vh;
+    background-color: #0b1327;
+;
+;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 80%;
+    height: 90vh;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 32px;
+    padding: 32px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.esquerda, .direita{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.formLogin, .facaLogin, .formCadastro, .facaCadastro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.facaLogin, .facaCadastro{
+    position: absolute;
+
+    h2, p{
+        color: #0b1327c9;
+    }
+    
+    button{
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+.card::after{
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-image: url("../assets/3439406_61803.webp");
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+}
+
+
+.card.loginActive .facaLogin{
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+.card.loginActive .facaCadastro{
+    transform: translateX(0);
+    transition: all .3s .3s;
+    opacity: 1;
+}
+
+.card.loginActive .formLogin{
+    transition: all .3s .3s;
+    opacity: 1;
+}
+
+.card.loginActive .formCadastro{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.loginActive::after{
+    transform: translateX(50%);
+}
+
+
+.card.cadastroActive .facaLogin{
+    transform: translateX(0);
+    transition: all .3s .3s;
+    opacity: 1;
+}
+
+.card.cadastroActive .formCadastro{
+    transition: all .3s .3s;
+    opacity: 1;
+}
+
+.card.cadastroActive .facaCadastro{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.cadastroActive .formLogin{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card.cadastroActive::after{
+    transform: translateX(-50%);
+}
+
+.card::after{
+    transition: all 0.5s ease-in-out;
+}
+
+.facaCadastro{
+    transition: all .3s 0;
+    transform: translateX(200%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.formLogin{
+    opacity: 0;
+    transition: all .3s 0;
+}
+
+.facaLogin{
+    transition: all .3s 0;
+    transform: translateX(-200%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.formCadastro{
+    opacity: 0;
+    transition: all .3s 0;
+}
+
+.content,
+.content h1,
+.content label,
+.content select,
+.content input,
+.content button {
+  color: #2c3e50 !important;
+}
+
+/* Override de cores para Meu Cadastro */
+body {
+  color: #2c3e50;
+}
+
+/* Títulos */
+h2 {
+  color: #2c3e50;
+}
+
+.form-group label,
+.form-group span {
+  color: #2c3e50;
+}
+
+a {
+  color: #0066cc;  
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
