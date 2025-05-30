@@ -56,7 +56,7 @@ clinica/
 5. Acesse no navegador:
 
    ```
-   http://localhost:8080/clinica
+   http://localhost:8080
    ```
 
 ## Usuários de Teste
