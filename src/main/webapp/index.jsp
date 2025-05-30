@@ -33,11 +33,14 @@
                 <div class="formCadastro">
                     <h2>Criar Conta</h2>
                     <form method="post" action="${pageContext.request.contextPath}/admin/pacientes/salvar">
-                        <!-- Se quiser real cadastro de pacientes, ajuste o action -->
                         <input type="text" name="nome"
                                placeholder="Nome" required>
                         <input type="email" name="email"
                                placeholder="E-mail" required>
+                        <input type="text" name="cpf"
+                               placeholder="CPF (somente números)" required>
+                        <input type="text" name="celular"
+                               placeholder="Celular (com DDD)" required>
                         <input type="password" name="senha"
                                placeholder="Senha" required>
                         <input type="password" name="confirmaSenha"
