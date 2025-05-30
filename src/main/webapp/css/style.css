@@ -271,3 +271,11 @@ a:hover {
   text-decoration: underline;
 }
 
+.success {
+  padding: 10px;
+  background: #e0ffe0;
+  border: 1px solid #0a0;
+  color: #060;
+  margin-bottom: 1rem;
+  text-align: center;
+}
