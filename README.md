@@ -1,4 +1,5 @@
 # Clínica POO — Sistema de Agendamento de Consultas Médicas
+Isabelle da Costa Lopes, Ana Luiza klaussen e Matheus Felipe Dantas 
 
 Este projeto é uma aplicação web em Java (Servlets + JSP) para clínicas e consultórios, permitindo agendamento de consultas, visualização de histórico e gestão de pacientes/médicos.
 
